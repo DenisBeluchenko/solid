@@ -3,7 +3,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
-    static int COUNT;
+    protected static int COUNT;
     public static void main(String[] args) {
         HashMap<String, Integer> products = new HashMap<>();
         products.put("Хлеб", 56);
