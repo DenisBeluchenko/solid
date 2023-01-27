@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     protected static int COUNT;
+
     public static void main(String[] args) {
         HashMap<String, Integer> products = new HashMap<>();
         products.put("Хлеб", 56);
@@ -12,10 +13,7 @@ public class Main {
         products.put("Пирожок", 45);
         COUNT = products.size();
         System.out.println("В МАГАЗИНЕ В НАЛИЧИИ");
-        for (Map.Entry<String, Integer> productAndPrice : products.entrySet()) {
-            System.out.println(productAndPrice.getKey() + " за " + productAndPrice.getValue() + " руб./шт.");
-        }
-
+        products.forEach((key, value) -> System.out.println(key + " за " + value + " руб./шт."));
         System.out.println("Введите два слова: название товара и количество. Или end");
         Scanner scanner = new Scanner(System.in);
         Purchase purchase = new Purchase();
